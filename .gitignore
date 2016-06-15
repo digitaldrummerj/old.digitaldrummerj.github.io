@@ -6,3 +6,4 @@ nbproject
 .idea
 vendor
 Gemfile.lock
+.jekyll-metadata

@@ -4,6 +4,7 @@ title: Docker - Getting Started On Windows
 date: 2016-05-31 06:00
 categories: ['docker']
 published: true
+series: docker-toolkit-windows
 excerpt: |
      After seeing a Docker presentation recently I decided to finally figure out how to get Docker working correctly on Windows.  Luckily it worked out of the box fairly well but I did run into issues with Windows file path lengths and proxy issues.  This series of article will documented how I got Docker working and overcame those issues.  
 
@@ -16,6 +17,8 @@ excerpt: |
 
 
 {% assign imagedir = "/images//" | prepend: site.baseurl | prepend: site.url %}
+
+{% include series.html %}
 
 After seeing a Docker presentation recently I decided to finally figure out how to get Docker working correctly on Windows.  Luckily it worked out of the box fairly well but I did run into issues with Windows file path lengths and proxy issues.  This series of article will documented how I got Docker working and overcame those issues.
 
