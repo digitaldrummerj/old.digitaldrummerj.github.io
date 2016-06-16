@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Docker - Getting Started  Part 2
-date: 2016-0601 06:0"
+date: 2016-0601 06:00
 categories: [' docker']
 published: true
 excerpt: |

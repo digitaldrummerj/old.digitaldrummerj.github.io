@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Docker on Windows - Mounting Directories in Containers
+title: Docker - Mounting Windows Directories in Containers
 date: 2016-06-03 06:00
 categories: ['docker']
 series: docker-toolkit-windows
@@ -13,7 +13,9 @@ excerpt: |
 
 {% assign imagedir = "/images/docker-toolkit-windows/" | prepend: site.baseurl | prepend: site.url %}
 
-In the [previous Docker tutorial](../docker-on-windows-getting-started/) we learned how to install Docker and get our first container running.  In this tutorial we are going to learn how to mount additional directories within our Docker container that are outside of the c:\Users directory.  By default, Docker only mounts the c:\Users directory inside the docker machine and containers.  For myself, I have all of my project files two places: c:\projects and c:\personal.  I didn't want to change my standard configuration just for Docker.  Luckily, it is really easy to mount additional directories.    
+{% include series.html %}
+
+In the [previous tutorial](../docker-on-windows-getting-started/) we learned how to install Docker and get our first container running.  In this tutorial we are going to learn how to mount additional directories within our Docker container that are outside of the c:\Users directory.  By default, Docker only mounts the c:\Users directory inside the docker machine and containers.  For myself, I have all of my project files two places: c:\projects and c:\personal.  I didn't want to change my standard configuration just for Docker.  Luckily, it is really easy to mount additional directories.    
 
 To mount additional directories, you need to add the directory as a shared folder within Virtualbox and then enable long file paths and symlinks.  Once the Virtualbox shared folders are setup, you need to mount the directories within the docker machine so that they are available to the containers.  
 

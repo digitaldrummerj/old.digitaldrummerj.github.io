@@ -12,6 +12,8 @@ Gulp 4 is not released yet but if you have a need to install it here is how to d
 
 ## Globally Installing Gulp
 
+The first thing we need to do is install the Gulp command line to be able to run the gulp task.
+
 1. Open a Command Prompt (Windows) or Terminal (Mac or Linux)
 1. Check if you have Gulp 3.x install
 
@@ -20,7 +22,7 @@ Gulp 4 is not released yet but if you have a need to install it here is how to d
 1. If a Gulp version is returned other than Gulp 4, you will need to upgrade by running the following commands
 
         $ npm uninstall -g gulp
-        $ npm install -g git+https://git@github.com/gulpjs/gulp.git#4.0
+        $ npm install -g git+https://git@github.com/gulpjs/gulp-cli.git#4.0
 
 1. Verify 4.x installed correctly
 
@@ -28,6 +30,8 @@ Gulp 4 is not released yet but if you have a need to install it here is how to d
         $ gulp -v
             
 ## Updating Your Projects package.son
+
+Now we need to tell our project to use Gulp 4.0 when it runs the gulp task.
 
 If you using a previous version of Gulp in your package.json file, you can upgrade it if you would like or continue to use Gulp 3.x.  I have not had any issue with leaving my local repository at 3.9 while having Gulp 4 installed globally.
 

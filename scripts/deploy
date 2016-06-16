@@ -1,9 +1,4 @@
-    
-ncftp -u "$USERNAME" -p "$PASSWORD" $HOST<<EOF
-rm -rf site/wwwroot
-mkdir site/wwwroot
-quit
-EOF
+#!/bin/bash
 
 cd _site
 rm robots.txt
@@ -13,6 +8,15 @@ echo -e "User-agent: *" >> robots.txt
 echo -e "Disallow: /" >> robots.txt
 echo -e "Disallow: /cgi-bin/" >> robots.txt
 
-ncftpput -R -v -u "$USERNAME" -p "$PASSWORD" $HOST /site/wwwroot .
+git init
+git config user.name "Travis CI"
+git config user.email "cideploy@digitaldrummerj.me"
+
+git add .
+git commit -m "Deploy"
+
+# We redirect any output to
+# /dev/null to hide any sensitive credential data that might otherwise be exposed.
+git push --force --quiet "https://${git_user}:${git_password}@${git_target}" master:master > /dev/null 2>&1 
 
 htmlproofer ./_site --only-4xx
