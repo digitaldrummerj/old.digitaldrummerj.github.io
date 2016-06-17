@@ -31,21 +31,18 @@ Note: I assume that you have alrady cloned your jekyll repo to your machine.  Th
 1. In the _includes directory create a new file called series.html
 1. The first thing we are going to do is add an if statement to make sure that the it is a series before trying to output the listing.  Without this, it would output every page if the post didnt have a series and you included the series.html
 
-		{% highlight liquid %}
 		{%  raw %}
 		{% if page.series %}
 
 		{% endif %}
 		{% endraw %}
-		{% endhighlight %}
-	
+		
 1. All of the code for the rest of this section will go in between the if and endif statements
 1. Next we are going to figure out how many post are part of the series and which article number in the series this post is.
 	* Total count will store in the count variable 
 	* The article number for this post in the idx variable.  
 	* We will loop through the post and increment the count if the Front Matter series tag match the current page's series tag.     		
 
-			{% highlight liquid %}
 			{%  raw %}
 			{% assign count = '0' %}
 			{% assign idx = '0' %}
@@ -58,37 +55,34 @@ Note: I assume that you have alrady cloned your jekyll repo to your machine.  Th
 				{% endif %}
 			{% endfor %}
 			{% endraw %}
-			{% endhighlight %}
 		
 1. 	Now we need to output the actual html code.  
 	* Note: We are using the panel css from bootstrap.  If you have bootstrap you are good, if not we will add just the panel css in the next section.
 	* First, we output a header for the series that says which part # this post is and how many total parts there are for the series.
 	* Second, we loop through the post and increment the count if the Front Matter series tag match the current page's series tag so that we can append Part # onto each post title.  If the url for the post in the series matches the current page's url, then it outputs "This Article" instead of the actual title.
 	
-			{% highlight liquid %}
-			{%  raw %}		
-				<div class="panel seriesNote">
-					<p>
-					This article is <strong>Part {{ idx }}</strong> in a <strong>{{ count }}-Part</strong> Series.
-					</p>
-					<ul>
-					{% assign count = '0' %}
-					{% for post in site.posts reversed %}
-					{% if post.series == page.series %}
-						{% capture count %}{{ count | plus: '1' }}{% endcapture %}
-						<li>Part {{ count }} - 
-						{% if page.url == post.url %}
-							This Article
-						{% else %}
-							<a href="{{post.url}}">{{post.title}}</a>
-						{% endif %}
-						</li>
+		{%  raw %}		
+			<div class="panel seriesNote">
+				<p>
+				This article is <strong>Part {{ idx }}</strong> in a <strong>{{ count }}-Part</strong> Series.
+				</p>
+				<ul>
+				{% assign count = '0' %}
+				{% for post in site.posts reversed %}
+				{% if post.series == page.series %}
+					{% capture count %}{{ count | plus: '1' }}{% endcapture %}
+					<li>Part {{ count }} - 
+					{% if page.url == post.url %}
+						This Article
+					{% else %}
+						<a href="{{post.url}}">{{post.title}}</a>
 					{% endif %}
-					{% endfor %}
-					</ul>
-				</div>
-			{% endraw %}
-			{% endhighlight %}
+					</li>
+				{% endif %}
+				{% endfor %}
+				</ul>
+			</div>
+		{% endraw %}
 		
 1.  In the next section, we will add the series listing onto a couple of post so you can see them in action
 
@@ -103,13 +97,12 @@ Note: I assume that you have alrady cloned your jekyll repo to your machine.  Th
 		published: true
 		series: "Intro to Series"	
 		---
+		
 1. In both article, include the series.html at the point in the html that you want the series listing to show.
 
- 		{% highlight liquid %}	
 		{% raw %}
 		{% include series.html %}
 		{% endraw %}
-		{% endhighlight %}
 
 1. Now run jekyll serve and view one of the new blog post.
 
