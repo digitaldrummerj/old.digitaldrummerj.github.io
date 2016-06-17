@@ -8,7 +8,7 @@ published: true
 excerpt: |
      Welcome the continuing series on using Jekyll. In this tutorial we are going to go through how to create the series listing like you see for this blog series.  
 
-	### Overview
+     ### Overview
 
      Sometimes a blog post gets too big and you need to split it into multiple articles or you want to do a series like this one that builds upon each other but you don't want to have to manage a listing of all of the post in the series.  Instead you can easily create a liquid template that does all of the work for you.  
 ---
