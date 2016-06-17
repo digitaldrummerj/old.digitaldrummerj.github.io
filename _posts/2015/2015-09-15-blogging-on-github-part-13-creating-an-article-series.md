@@ -8,14 +8,13 @@ published: true
 excerpt: |
      Welcome the continuing series on using Jekyll. In this tutorial we are going to go through how to create the series listing like you see for this blog series.  
 
-     ### Overview
+### Overview
 
      Sometimes a blog post gets too big and you need to split it into multiple articles or you want to do a series like this one that builds upon each other but you don't want to have to manage a listing of all of the post in the series.  Instead you can easily create a liquid template that does all of the work for you.  
 ---
 {% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url %}
 
 Welcome the continuing series on using Jekyll. In this tutorial we are going to go through how to create the series listing like you see for this blog series.  
-
 
 {% include series.html %}
 
@@ -32,19 +31,22 @@ Note: I assume that you have alrady cloned your jekyll repo to your machine.  Th
 1. In the _includes directory create a new file called series.html
 1. The first thing we are going to do is add an if statement to make sure that the it is a series before trying to output the listing.  Without this, it would output every page if the post didnt have a series and you included the series.html
 
-{%  raw %}
+		{% highlight liquid %}
+		{%  raw %}
 		{% if page.series %}
 
 		{% endif %}
-{% endraw %}
-		
+		{% endraw %}
+		{% endhighlight %}
+	
 1. All of the code for the rest of this section will go in between the if and endif statements
 1. Next we are going to figure out how many post are part of the series and which article number in the series this post is.
 	* Total count will store in the count variable 
 	* The article number for this post in the idx variable.  
 	* We will loop through the post and increment the count if the Front Matter series tag match the current page's series tag.     		
 
-{%  raw %}
+			{% highlight liquid %}
+			{%  raw %}
 			{% assign count = '0' %}
 			{% assign idx = '0' %}
 			{% for post in site.posts reversed %}
@@ -55,14 +57,16 @@ Note: I assume that you have alrady cloned your jekyll repo to your machine.  Th
 					{% endif %}
 				{% endif %}
 			{% endfor %}
-{% endraw %}
+			{% endraw %}
+			{% endhighlight %}
 		
 1. 	Now we need to output the actual html code.  
 	* Note: We are using the panel css from bootstrap.  If you have bootstrap you are good, if not we will add just the panel css in the next section.
 	* First, we output a header for the series that says which part # this post is and how many total parts there are for the series.
 	* Second, we loop through the post and increment the count if the Front Matter series tag match the current page's series tag so that we can append Part # onto each post title.  If the url for the post in the series matches the current page's url, then it outputs "This Article" instead of the actual title.
-		
-		{%  raw %}		
+	
+			{% highlight liquid %}
+			{%  raw %}		
 				<div class="panel seriesNote">
 					<p>
 					This article is <strong>Part {{ idx }}</strong> in a <strong>{{ count }}-Part</strong> Series.
@@ -83,8 +87,9 @@ Note: I assume that you have alrady cloned your jekyll repo to your machine.  Th
 					{% endfor %}
 					</ul>
 				</div>
-		{% endraw %}
-			
+			{% endraw %}
+			{% endhighlight %}
+		
 1.  In the next section, we will add the series listing onto a couple of post so you can see them in action
 
 ### Section 2: Add Series Tag to Post
@@ -99,23 +104,22 @@ Note: I assume that you have alrady cloned your jekyll repo to your machine.  Th
 		series: "Intro to Series"	
 		---
 1. In both article, include the series.html at the point in the html that you want the series listing to show.
-		
-{% raw %}
+
+ 		{% highlight liquid %}	
+		{% raw %}
 		{% include series.html %}
-{% endraw %}
+		{% endraw %}
+		{% endhighlight %}
 
 1. Now run jekyll serve and view one of the new blog post.
-
 
 If you do not have the bootstrap css include in your blog, then you will notice that the series listing does not stand out at all.  
 
 ![Series Listing with No Css]({{"ScreenshotOfSeriesWithNoCss.png" | prepend: imagedir}})
 
-
 In the next section we will add the missing panel css to make it look more like this.
 
  ![Series Listing with Css]({{"ScreenshotOfSeriesWithCss.png" | prepend: imagedir}})
-
 
 ### Section 3: Adding CSS
 
@@ -214,13 +218,10 @@ In this section we will add in the css to make the series listing stand out and 
 
 	![Series Listing with Css]({{"ScreenshotOfSeriesWithCss.png" | prepend: imagedir }})
 
-
 ### Conclusion
 
 Now if you do an article series, you can easily have a professional looking series listing and it requires very little to get it working.  
 
 In the next lesson, I will show you how to get the code highlighting working when your code includes liquid syntax such as we did in the code examples in this article.
-
-
 
 {% include series.html %}
