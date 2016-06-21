@@ -23,7 +23,7 @@ analytics:
 
 style:
 #    body: "whitesmoke"
-    padding: 33%
+    padding: 15%
     anchor: "#46f"
     serif-heading: true
     nav: "#181818"
@@ -73,8 +73,6 @@ defaults:
 
 # markdown: redcarpet
 markdown: kramdown
-# kramdown:
-#     input: GFM
 highlighter: rouge
 permalink: /:title/
 

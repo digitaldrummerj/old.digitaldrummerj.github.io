@@ -15,17 +15,15 @@ Gulp 4 is not released yet but if you have a need to install it here is how to d
 The first thing we need to do is install the Gulp command line to be able to run the gulp task.
 
 1. Open a Command Prompt (Windows) or Terminal (Mac or Linux)
-1. Check if you have Gulp 3.x install
+1. Check if you have Gulp CLI < 1.2.1 installed
 
     	   $ gulp -v
 
-1. If a Gulp version is returned other than Gulp 4, you will need to upgrade by running the following commands
+1. If a Gulp version is < 1.2.1, you will need to upgrade by running the following commands
 
-        $ npm uninstall -g gulp
-        $ npm install -g git+https://git@github.com/gulpjs/gulp-cli.git#4.0
+        $ npm install -g gulp-cli
 
-1. Verify 4.x installed correctly
-
+1. Verify Gulp CLI 1.2.1 installed correctly
     
         $ gulp -v
             
