@@ -9,6 +9,9 @@ excerpt: |
 ---
 
 
+If you are with .NET WebApi in an enterprise to create reusable services where you will be using IIS Windows Integrated authentication, you will run into Cross-Origin Resource Sharing (CORS) when you try to access the endpoints for your website.
+
+
 **nuget package**
 
 Microsoft.AspNet.Cors
