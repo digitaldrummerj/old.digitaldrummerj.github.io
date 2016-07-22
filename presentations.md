@@ -29,27 +29,15 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 ## Upcoming Speaking Engagements
 
+### Central California .NET User Group<span>- Fresno, Ca (July 21st, 2016)</span>
 
-### Ionic Denmark Meetup<span>- Denmark (Giving Remotely) (May 11th, 2016)</span>
-
-- [Data Driven Restful Api Creation Made Easy Breezy](#cloudapishootout)
-- [Meetup Page](http://www.meetup.com/ionicdenmark/events/229123265/)
-
-###  Nebraska Code <span>- Lincoln, Ne (May 18th-20th, 2016)</span>
-
-- [Cross Platform Mobile Applications with Ionic (Full Day Workshop)](#ionic)
-- [Database Driven Api Creation Made Easy Breezy with Back& ](#backand)
-- [Conference Home Page](http://nebrasakacode.com/)
+- [Cross Platform Mobile Developer with Visual Studio and Ionic](#ionic)
+- [Meetup Page](http://www.meetup.com/Central-CA-NET-Users/events/228410986/)
 
 ### Ionic Az Meetup<span>- Phoenix, Az (July 26th, 2016)</span>
 
 - [Intro to ionic v2](#ionic)
 - [Meetup Page](http://www.meetup.com/Ionic-AZ/events/230709047/)
-
-### Central California .NET User Group<span>- Fresno, Ca (July 21st, 2016)</span>
-
-- [Cross Platform Mobile Developer with Visual Studio and Ionic](#ionic)
-- [Meetup Page](http://www.meetup.com/Central-CA-NET-Users/events/228410986/)
 
 ### Las Vegas .NET User Group<span>- Las Vegas, Nv (July 28th, 2016)</span>
 
@@ -71,9 +59,10 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 - [Gulp for the .Net Developer](#gulp)
 - [Conference Home Page](http://www.musiccitycode.com)
 
-### Silicon Valley Code Camp <span> - San Jose, CA (October 1st and 2nd, 2016)</span>
+### Silicon Valley Code Camp <span> - San Jose, CA (September 30th - October 2nd, 2016)</span>
 
 - [Data Driven Restful Api Creation Made Easy Breezy](#cloudapishootout)
+- [Ionic v2 Full-Day Workshop](#ionic)
 - [Conference Home Page](https://www.siliconvalley-codecamp.com/)
 
 <p>&nbsp;</p>
@@ -94,7 +83,6 @@ If you would like me to given any of these talks you are meetings, please let me
 * [Designing a Restful Api in Minutes with Backand](#backand)
 * [Data Driven Restful Api Creation Made Easy Breezy](#cloudapishootout)
 * [Gulp for the .Net Developer](#gulp)
-* [Ionic - Revolutionizing Hybrid Mobile Application Development](#ionic)
 * [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
 * [Side Waffle - The easiest way to build templates for Visual Studio](#sidewaffle)
 * [Tips and Tricks to Maximize Your Productivity in Visual Studio](#vsprod)
@@ -183,10 +171,9 @@ Slides: [http://slides.com/digitaldrummerj/data-driven-restful-api-creation-made
 #### Past Presentations
 
 * [Silicon Valley Code Camp <span> - San Jose, CA (October 1st and 2nd, 2016)</span>](https://www.siliconvalley-codecamp.com/)
+* [Nebraska Code Conference <span>- Lincoln, NE (May 18th-20th, 2016)</span>](http://nebraskacode.com)
 * [Ionic Denmark Meetup <span>- Denmark Arhus (Giving Remotely) (April 27th, 2016)</span>](http://www.meetup.com/ionicdenmark/events/228676467/)
 * [Ionic Denmark Meetup<span>- Denmark Copenhagen (Giving Remotely) (May 11th, 2016)</span>](http://www.meetup.com/ionicdenmark/events/229123265/)
-
-<p>&nbsp;</p> 
 
 ---
 
@@ -207,21 +194,21 @@ Slides and Source Code: [https://github.com/digitaldrummerj/GulpTalk](https://gi
 
 ----
 
-### <a name="ionic"></a>Ionic v1 - Revolutionizing Hybrid Mobile Application Development or Cross Platform Mobile Apps with Ionic
+### <a name="ionic"></a>Cross Platform Mobile Apps with Ionic
 
 
 Are you already a web developer and want to create a mobile application?  Then come learn all about the Ionic mobile framework.  Using technologies that we already know and love with Html 5, Javascript, and CSS 3, you can easily create a mobile application that targets Android, iOS, and Windows 10 Phone.  Your application will look, feel and perform like a native application without you having to do anything special.  Ionic takes care of all of the hard work of making it look right on the mobile devices so that you can focus on your application.  After seeing the Ionic framework, you will be excited to deliver mobile applications.  We will walk through the features of Ionic, getting it setup, and then create a fully working application that is ready to release in the app store.
 
 
-**Overview**
+**Ionic Overview**
 
-- Slides: [http://slides.com/digitaldrummerj/ionic-overview/](http://slides.com/digitaldrummerj/ionic-overview/)
-- Demos: [https://github.com/digitaldrummerj/IonicFrameworkTalk](https://github.com/digitaldrummerj/IonicFrameworkTalk)
+- [Slides](https://slides.com/digitaldrummerj/ionic-overview-2016/)
+- [Demos](https://github.com/digitaldrummerj/IonicFrameworkTalk)
 
-**Tutorial /Workshop**
+**Visual Studio Apache Cordova Tooling** 
 
-- Fluent Conference Slides: [https://slides.com/digitaldrummerj/ionic-workshop-fluent/](https://slides.com/digitaldrummerj/ionic-workshop-fluent/)
-- Fluent Conference Code: [https://github.com/digitaldrummerj/fluentconf-ionic-workshop](https://github.com/digitaldrummerj/fluentconf-ionic-workshop)
+- [Slides](https://github.com/digitaldrummerj/TacoTalk/blob/master/Taco%20-%20Intro.pdf)
+- [Demos](https://github.com/digitaldrummerj/TacoTalk)
 
 #### Additional Resources
 
