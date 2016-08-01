@@ -115,9 +115,9 @@ Don't forget to pin to start menu or task bar if going to be using for demo.
 	* Under the **Show Settings For** drop down make the following changes:
 		* Text Editor: Arial 14
 		* Editor Tooltip: Calibri 14
-		* Statement Completion: Calibri 1tas,
-		* [All Text Tool Windows]: Tahoma 13
-		* [Watch, Locals, and Autos Tool Windows]: Tahoma 14
+		* Statement Completion: Calibri 14,
+		* All Text Tool Windows: Tahoma 13
+		* Watch, Locals, and Autos Tool Windows: Tahoma 14
 		* Environment Font: Calibri 14
 		* Package Manager Console:  ??? (if using it for demos)
 1. Go to **Environment -> Start up**
@@ -125,11 +125,11 @@ Don't forget to pin to start menu or task bar if going to be using for demo.
 	* Uncheck Download content every
 1. Go to **Environment -> Synchronized Settings**
 	* Uncheck "Synchronize settings across devices when signed into Visual Studio"
-	* Note: This is done so that you presentation settings do affect any other machines
+	* Note: This is done so that your presentation settings do affect any other machines
 1. Go to **Environment -> Keyboard**
 	* Build.BuildSelection -> Ctrl + \
 1. Go To **Projects and Solutions**
-	* Check "Track ACtive Item in Solution Explorer"
+	* Check "Track Active Item in Solution Explorer"
 	* Check "Always Show Solution"
 	* Check "Always show Error List if build finishes with errors"
 	* Check "Show Output windows when build starts"

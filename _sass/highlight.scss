@@ -8,7 +8,6 @@
 
 .highlight .line-numbers,html .gist .gist-file .gist-syntax .highlight .line_numbers {
     text-align: right;
-    font-size: 13px;
     line-height: 1.45em;
     // background: #073642 !important;//url('/images/noise.png?1369013854') top left !important;
     border-right: 1px solid #00232c !important;
@@ -86,7 +85,6 @@ html .gist .gist-file .gist-meta {
     padding: .6em 0.8em;
     border: 1px solid #083e4b !important;
     color: #586e75;
-    font-size: .7em !important;
     // background: #073642 url('/images/noise.png?1369013854') top left;
     line-height: 1.5em
 }
@@ -129,7 +127,6 @@ pre {
     border-radius: 0.4em;
     border: 1px solid #05232b;
     line-height: 1.45em;
-    font-size: 13px;
     margin-bottom: 2.1em;
     padding: .8em 1em;
     color: #ffffff;
@@ -149,7 +146,6 @@ p code,li code {
     display: inline-block;
     white-space: no-wrap;
     background: #fff;
-    font-size: .8em;
     line-height: 1.5em;
     color: #555;
     border: 1px solid #ddd;
@@ -163,7 +159,6 @@ p code,li code {
 }
 
 p pre code,li pre code {
-    font-size: 1em !important;
     background: none;
     border: none
 }
