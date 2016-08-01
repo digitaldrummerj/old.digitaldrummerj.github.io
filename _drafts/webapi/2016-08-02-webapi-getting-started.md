@@ -3,21 +3,33 @@ layout: post
 title: 'Getting Started with .NET WebApi'
 date: 2016-07-25 06:00
 categories: ['webapi']
+series: webapi-getting-started
 published: true
 excerpt: |
+    Welcome to the series on getting started with .NET WebApi.  In this series we will learn how to:
+
+    - Create a basic C# webAPI with Windows Integrated Authentication 
+    - Setup camel-cased json properties for the response 
+    - Setup A Standard Response
+    - Solving CORS Issues When Using Credentials
+
 
 ---
 
 {% assign imagedir = "/images/webapi-getting-started/" | prepend: site.baseurl | prepend: site.url %}
 
+{% include series.html %}
 
-In this guide we will learn how to:
+Welcome to the series on getting started with .NET WebApi.  In this series we will learn how to:
 
-- Create a basic C# webAPI with Windows Integrated Authentication 
-- Setup A Standard Response
+- Create a basic C# WebAPI with Windows Integrated Authentication 
 - Setup camel-cased json properties for the response 
+- Setup A Standard Response
+- Solving CORS Issues When Using Credentials
 
-## Make a new WebAPI Project 
+In this article we will create a basic C# WebApi with Windows Integrated Authentication and create our first WebApi endpoint.  
+
+## Create a new WebAPI Project 
 
 To make a C# application with Visual Studio:
 
@@ -133,8 +145,4 @@ The response you get back will be an xml document that contains a string with yo
 
 ## Conclusion
 
-In this guide we learned how to:
-
-* Create a basic C# webAPI with Windows Integrated Authentication 
-* Setup A Standard Response
-* Setup camel cased json properties for the response 
+In this guide we learned how to create a basic C# WebAPI project that uses Windows Integrated Authentication.  In the next guide, we will learn how to convert the JSON responses to be camel cased instead of following the .NET pascal case convention without having to update all of our .NET class. 
