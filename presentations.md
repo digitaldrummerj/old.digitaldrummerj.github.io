@@ -7,7 +7,7 @@ redirect_from: "/presentations/"
 sitemap:
     priority: 1.0
     changefreq: weekly
-    lastmod: 2016-05-08T16:31:30+05:30
+    lastmod: 2016-08-11T16:31:30+05:30
 ---
 
 
@@ -29,25 +29,10 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 ## Upcoming Speaking Engagements
 
-### Central California .NET User Group<span>- Fresno, Ca (July 21st, 2016)</span>
 
-- [Cross Platform Mobile Developer with Visual Studio and Ionic](#ionic)
-- [Meetup Page](http://www.meetup.com/Central-CA-NET-Users/events/228410986/)
 
-### Ionic Az Meetup<span>- Phoenix, Az (July 26th, 2016)</span>
 
-- [Intro to ionic v2](#ionic)
-- [Meetup Page](http://www.meetup.com/Ionic-AZ/events/230709047/)
 
-### Las Vegas .NET User Group<span>- Las Vegas, Nv (July 28th, 2016)</span>
-
-- [Cross Platform Mobile Developer with Visual Studio and Ionic](#ionic)
-- [User Group Home Page](http://www.dotnetgroup.org/)
-
-### That Conference <span>- Wisconsin Dells, Wisconsin (August 8th-10th, 2016)</span>
-
-- [Cross Platform Mobile Applications with Ionic](#ionic)
-- [Conference Home Page](https://www.thatconference.com/)
 
 ### MidwestJS <span> - Minneapolis, MN (August 10th-12th,2016)</span>
 
@@ -199,13 +184,18 @@ Slides and Source Code: [https://github.com/digitaldrummerj/GulpTalk](https://gi
 
 Are you already a web developer and want to create a mobile application?  Then come learn all about the Ionic mobile framework.  Using technologies that we already know and love with Html 5, Javascript, and CSS 3, you can easily create a mobile application that targets Android, iOS, and Windows 10 Phone.  Your application will look, feel and perform like a native application without you having to do anything special.  Ionic takes care of all of the hard work of making it look right on the mobile devices so that you can focus on your application.  After seeing the Ionic framework, you will be excited to deliver mobile applications.  We will walk through the features of Ionic, getting it setup, and then create a fully working application that is ready to release in the app store.
 
+**Ionic v2 Overview**
 
-**Ionic Overview**
+* [Slides](http://digitaldrummerj.me/ionic-v2/#/)
+* [Conference App Demo](https://github.com/driftyco/ionic-conference-app)
+* [Master/Detail Demo](https://github.com/digitaldrummerj/ionic2-master-detail-demo)
+
+**Ionic V1 Overview**
 
 - [Slides](https://slides.com/digitaldrummerj/ionic-overview-2016/)
 - [Demos](https://github.com/digitaldrummerj/IonicFrameworkTalk)
 
-**Visual Studio Apache Cordova Tooling** 
+**Visual Studio Apache Cordova Tooling With Ionic** 
 
 - [Slides](https://github.com/digitaldrummerj/TacoTalk/blob/master/Taco%20-%20Intro.pdf)
 - [Demos](https://github.com/digitaldrummerj/TacoTalk)
