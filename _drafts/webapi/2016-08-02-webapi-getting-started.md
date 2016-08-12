@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Getting Started with .NET WebApi'
+title: '.NET WebApi - Your First Project'
 date: 2016-07-25 06:00
 categories: ['webapi']
 series: webapi-getting-started
@@ -12,13 +12,9 @@ excerpt: |
     - Setup camel-cased json properties for the response 
     - Setup A Standard Response
     - Solving CORS Issues When Using Credentials
-
-
 ---
 
 {% assign imagedir = "/images/webapi-getting-started/" | prepend: site.baseurl | prepend: site.url %}
-
-{% include series.html %}
 
 Welcome to the series on getting started with .NET WebApi.  In this series we will learn how to:
 
@@ -27,7 +23,10 @@ Welcome to the series on getting started with .NET WebApi.  In this series we wi
 - Setup A Standard Response
 - Solving CORS Issues When Using Credentials
 
+{% include series.html %}
+
 In this article we will create a basic C# WebApi with Windows Integrated Authentication and create our first WebApi endpoint.  
+
 
 ## Create a new WebAPI Project 
 

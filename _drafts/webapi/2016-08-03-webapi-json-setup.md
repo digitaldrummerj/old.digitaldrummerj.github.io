@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 'Setup camelCase for JSON in .NET WebApi'
+title: '.NET WebApi - Setup JSON Camel Cased Fields'
 date: 2016-08-03 06:00
 categories: ['webapi']
 series: webapi-getting-started
 published: true
 excerpt: |
-    Welcome to the continuing series on getting started with .NET WebApi.  In this article we will learn how to setup the JSON response to convert the .NET pascal cased properties into camel cased properties.  
+    Welcome to the continuing series on getting started with .NET WebApi.  In this article we will learn how to set the JSON response to convert the .NET pascal cased properties into camel cased properties.  
 
     ## Definitions
 
@@ -16,21 +16,22 @@ excerpt: |
     ### Creating Class to Return
 
     In order to test the camel case configuration, we are going to update the FirstController that we created in the previous post to return a UserModel instead of a string.
-
 ---
 
 {% assign imagedir = "/images/webapi-getting-started/" | prepend: site.baseurl | prepend: site.url %}
 
-{% include series.html %}
+
 
 Welcome to the continuing series on getting started with .NET WebApi.  In this article we will learn how to setup the JSON response to convert the .NET pascal cased properties into camel cased properties.  
+
+{% include series.html %}
 
 ## Definitions
 
 * Pascal Case = Each word starts with a captial letter (e.g. UserName)
 * Camel Case = starts with a lowercase letter and then each word starts with a captial letter (e.g. userName).  Notice the lower case u in userName.
 
-### Creating Class to Return
+### Creating A Class to Return from WebApi Method
 
 In order to test the camel case configuration, we are going to update the FirstController that we created in the previous post to return a UserModel instead of a string.
 
@@ -76,7 +77,7 @@ public UserModel Get()
 }
 ```
 
-1. You will also need to add the following using statement so that is knows how to find the UserModel class we created.
+You will also need to add the following using statement so that is knows how to find the UserModel class we created.
 
 ```c#
 using WebApi_Demo.Models;
@@ -100,7 +101,7 @@ Press F5 to compile our code and start a debug session.  Go to the api/first end
 {"UserName":"[My User Name]"}
 ```
 
-## Updating Configuration
+## Updating WebApi Configuration
 
 To fix the casing, we need to update the JSON formatter to use the CamelCasePropertyNamesContractResolver that is part of the JSON.NET library that is included with WebApi.
 
