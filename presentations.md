@@ -187,7 +187,8 @@ Are you already a web developer and want to create a mobile application?  Then c
 **Ionic v2 Overview**
 
 * [Slides](http://digitaldrummerj.me/ionic-v2/#/)
-* [Demo](https://github.com/driftyco/ionic-conference-app)
+* [Conference App Demo](https://github.com/driftyco/ionic-conference-app)
+* [Master/Detail Demo](https://github.com/digitaldrummerj/ionic2-master-detail-demo)
 
 **Ionic V1 Overview**
 
