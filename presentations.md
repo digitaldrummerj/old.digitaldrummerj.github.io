@@ -29,16 +29,6 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 ## Upcoming Speaking Engagements
 
-
-
-
-
-
-### MidwestJS <span> - Minneapolis, MN (August 10th-12th,2016)</span>
-
-- [Cross Platform Mobile Applications with Ionic](#ionic)
-- [Conference Home Page](http://midwestjs.com/)
-
 ### Music City Code <span> - Nashville, TN (August 18th-20th, 2016)</span>
 
 - [Gulp for the .Net Developer](#gulp)
@@ -166,7 +156,7 @@ Slides: [http://slides.com/digitaldrummerj/data-driven-restful-api-creation-made
 
 With the release of Visual Studio 2015 Gulp has become a standard part of the workflow for .Net developers.  Gulp has a lot of functionality available such as minification, injecting script tags into html, running js hint, creating source maps, generating css from sass files, plus much more.  In this session, you will learn the basics of gulp,  how it integrates into Visual Studio, and how to create your own gulpfile to automate common tasks. You will walk away with a starter gulp file to get you on your way to fully utilizing gulp.
 
-Slides and Source Code: [https://github.com/digitaldrummerj/GulpTalk](https://github.com/digitaldrummerj/GulpTalk)
+Slides and Source Code: [https://github.com/digitaldrummerj/GulpForNetDevelopers](https://github.com/digitaldrummerj/GulpForNetDevelopers)
 
 #### Additional Resources
 - [Gulp Home Page](http://gulpjs.com)
