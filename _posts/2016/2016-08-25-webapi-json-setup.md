@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'ASP.NET Web Api - Setup JSON Camel Cased Fields'
-date: 2016-08-03 06:00
+date: 2016-08-25 06:00
 categories: ['Web Api']
 series: Web Api-getting-started
 published: true
