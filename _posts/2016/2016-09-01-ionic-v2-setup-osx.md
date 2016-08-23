@@ -3,18 +3,21 @@ layout: post
 title: Ionic v2 - Setup on OSx
 published: true
 categories: [ionic]
-date: 2016-08-14 06:01
+date: 2016-09-01 06:15
 excerpt: | 
-    If you are like me and just starting to work with the Ionic Framework and don’t already have a machine setup to do Android, iOS, Node, etc development then many of the guides out there leave out a number of steps that you need to do in order to get everything working.
-    
-    Even being a Windows user I was able to pretty easily get Ionic working on a Mac.  The only difference between the Windows setup and the OSx setup is that you can build for an iOS device on a Mac.  
+    In order to work with the Ionic framework there is a bit of software installs and configuration that needs to happen in order to deploy to devices.  However, many of the guides out there leave out a number of steps that tripped me up when I first started using Ionic.  
+
+    This guide will go through all of the steps needed for deploying to an Android and iOS device using a Mac.  
 ---
 
 {% assign imagedir = "/images/ionic2-osx/" | prepend: site.baseurl | prepend: site.url %}
 
-If you are like me and just starting to work with the Ionic Framework and don’t already have a machine setup to do Android, iOS, Node, etc development then many of the guides out there leave out a number of steps that you need to do in order to get everything working.
+In order to work with the Ionic framework there is a bit of software installs and configuration that needs to happen in order to deploy to devices.  However, many of the guides out there leave out a number of steps that tripped me up when I first started using Ionic.  
 
-Even being a Windows user I was able to pretty easily get Ionic working on a Mac.  The only difference between the Windows setup and the OSx setup is that you can build for an iOS device on a Mac.
+This guide will go through all of the steps needed for deploying to an Android and iOS device using a Mac.  
+
+* TOC
+{:toc}
 
 ## General Install Steps
 
@@ -365,13 +368,20 @@ You are now ready to go create your ionic applications.
 
 ## iOS Setup Steps
 
+### XCode
+
 1. Install Xcode from app store.  This will take awhile since it is ~2 gigs in size.
 	- Once install is completed, open xcode and accept the license
+
+### iOS Simulator
+
 1. Install the iOS Simulator that Ionic will use.
 
     npm install -g ios-sim
 
     > You may need to start the npm install command with sudo depending on your node setup.
+
+### iOS Deploy Package
 
 1. Install the iOS Deploy npm package
 
@@ -379,7 +389,7 @@ You are now ready to go create your ionic applications.
 
     > You may need to start the npm install command with sudo depending on your node setup.
 
-## Verifying iOS Setup
+### Verifying iOS Setup
 
 1. Open terminal
 1. Navigate the directory where you store you development projects (I use /users/[Your Username]/projects) 

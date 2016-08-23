@@ -3,21 +3,25 @@ layout: post
 title: "Ionic v2 - How to setup on Windows"
 published: true
 categories: [ionic]
-date: 2016-08-14 06:00
+date: 2016-09-01 06:00
 excerpt: | 
+    In order to work with the Ionic framework version 2 there is a bit of software installs and configuration that needs to happen in order to deploy to devices.  However, many of the guides out there leave out a number of steps that tripped me up when I first started using Ionic.  
 
-    If you are like me and just starting to work with the [Ionic Framework Version 2](http://www.ionicframework.com) and don't already have a machine setup to do Android, iOS, Node, etc development then many of the guides out there leave out a number of steps that you need to do in order to get everything working.  
+    This guide will go through all of the steps needed for deploying to an Android device using a Windows machine.  Note that deploying to an iOS device requires a Mac.  
     
-    It is really easy to get everything working though once you know the steps.  Since I am a Windows user and love to automate work that is easily repeatable, I used  [Chocolatey](http://www.chocolatey.org) and [Boxstarter](http://www.boxstarter.org) to automate the setup for the Ionic Framework.
-    
-    On Windows, you will only be able to setup Android development.  Apple requires a Mac in order to do iOS development.
+    Since I love to automate setup work so that I can easily repeat it, we will be using [Chocolatey](http://www.chocolatey.org) and [Boxstarter](http://www.boxstarter.org) for all of the installs and configurations. 
 ---
 
-If you are like me and just starting to work with the [Ionic Framework Version 2](http://www.ionicframework.com) and don't already have a machine setup to do Android, iOS, Node, etc development then many of the guides out there leave out a number of steps that you need to do in order to get everything working.  
+{% assign imagedir = "/images/ionic2-windows/" | prepend: site.baseurl | prepend: site.url %}
 
-It is really easy to get everything working though once you know the steps.  Since I am a Windows user and love to automate work that is easily repeatable, I used  [Chocolatey](http://www.chocolatey.org) and [Boxstarter](http://www.boxstarter.org) to automate the setup for the Ionic Framework.
+In order to work with the Ionic framework version 2 there is a bit of software installs and configuration that needs to happen in order to deploy to devices.  However, many of the guides out there leave out a number of steps that tripped me up when I first started using Ionic.  
 
-On Windows, you will only be able to setup Android development.  Apple requires a Mac in order to do iOS development.
+This guide will go through all of the steps needed for deploying to an Android device using a Windows machine.  Note that deploying to an iOS device requires a Mac.  
+    
+Since I love to automate setup work so that I can easily repeat it, we will be using [Chocolatey](http://www.chocolatey.org) and [Boxstarter](http://www.boxstarter.org) for all of the installs and configurations. 
+    
+* TOC
+{:toc}
 
 ## Software to be installed
 

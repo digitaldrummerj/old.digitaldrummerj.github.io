@@ -1,18 +1,18 @@
 ---
 layout: post
-title: '.NET WebApi - Setup Generic Response Handler'
-date: 2016-08-04 06:00
-categories: ['webapi']
-series: webapi-getting-started
+title: 'ASP.NET Web Api - Setup Generic Response Handler'
+date: 2016-08-30 06:00
+categories: ['Web Api']
+series: Web Api-getting-started
 published: true
 excerpt: |
-    Welcome to the continuing series on getting started with .NET WebApi.  In this article we will learn how to setup a standard response format for all of the endpoints.    
+    Welcome to the continuing series on getting started with ASP.NET Web Api.  In this article we will learn how to setup a standard response format for all of the endpoints.    
 
 ---
 
-{% assign imagedir = "/images/webapi-getting-started/" | prepend: site.baseurl | prepend: site.url %}
+{% assign imagedir = "/images/web-api-getting-started/" | prepend: site.baseurl | prepend: site.url %}
 
-Welcome to the continuing series on getting started with .NET WebApi.  In this article we will learn how to setup a generic response handler for all of Api calls.  This will allow us to consolidate the logic needed to create a proper response as well as it will allow us to consolidate the exception handling logic.     
+Welcome to the continuing series on getting started with ASP.NET Web Api.  In this article we will learn how to setup a generic response handler for all of Api calls.  This will allow us to consolidate the logic needed to create a proper response as well as it will allow us to consolidate the exception handling logic.     
 
 {% include series.html %}
 
