@@ -79,13 +79,20 @@ Next we need to install 3 npm packages for cordova, gulp and ionic@beta.  At the
   
 ### Google Chrome
 
-1. Download from  [https://www.google.com/chrome/browser/desktop/]\(https://www.google.com/chrome/browser/desktop/)
+>If you already have Google Chrome installed, you can skip this section.
+{:.warning}
+
+
+1. Download from  [https://www.google.com/chrome/browser/desktop/](https://www.google.com/chrome/browser/desktop/)
 1. Double click the dmg file to run it
 1. Drag the Google Chrome icon to the Application folder
 
     ![Google Chrome drag to Application folder]({{ "chrome-1.png" | prepend: imagedir }})
 
 ### Visual Studio Code 
+
+>If you already have Visual Studio Code installed, you can skip to step 5.
+{:.warning} 
 
 1. Download from [https://code.visualstudio.com/](https://code.visualstudio.com)
 
@@ -160,11 +167,7 @@ In this section, we will be installing everything that is needed in order to dep
 
     ![JDK8 Install Screen 4]({{ "jdk8-4.png" | prepend: imagedir }})
 
-1. Wait for the install to complete
-
-    ![JDK8 Install Screen 5]({{ "jdk8-5.png" | prepend: imagedir }})
-
-1. Click the Close button
+1. Once the install completes, click the Close button
 
     ![JDK8 Install Screen 6]({{ "jdk8-6.png" | prepend: imagedir }})
 
