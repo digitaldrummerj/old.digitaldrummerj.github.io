@@ -3,7 +3,7 @@ layout: post
 title: Ionic v2 - Setup on OSx
 published: true
 categories: [ionic]
-date: 2016-09-01 06:15
+date: 2016-09-06 06:15
 excerpt: | 
     In order to work with the Ionic framework there is a bit of software installs and configuration that needs to happen in order to deploy to devices.  However, many of the guides out there leave out a number of steps that tripped me up when I first started using Ionic.  
 

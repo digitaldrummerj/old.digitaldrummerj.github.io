@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'WebApi Cors Solved'
-date: 2016-05-17 06:00
+date: 2016-09-01 06:00
 categories: ['webapi','cors']
 published: true
 excerpt: |
