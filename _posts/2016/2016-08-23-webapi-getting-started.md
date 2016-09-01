@@ -3,7 +3,7 @@ layout: post
 title: 'ASP.NET Web Api - Getting Started'
 date: 2016-08-23 06:00
 categories: ['Web Api']
-series: Web Api-getting-started
+series: web-api-getting-started
 published: true
 excerpt: |
     Welcome to the series on getting started with .NET Web Api.  In this article we will create a basic C# Web Api with Windows Integrated Authentication and create our first Web Api endpoint.      

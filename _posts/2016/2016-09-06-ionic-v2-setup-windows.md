@@ -3,7 +3,7 @@ layout: post
 title: "Ionic v2 - How to setup on Windows"
 published: true
 categories: [ionic]
-date: 2016-09-01 06:00
+date: 2016-09-06 06:00
 excerpt: | 
     In order to work with the Ionic framework version 2 there is a bit of software installs and configuration that needs to happen in order to deploy to devices.  However, many of the guides out there leave out a number of steps that tripped me up when I first started using Ionic.  
 

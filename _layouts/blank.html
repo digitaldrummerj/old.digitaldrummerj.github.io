@@ -27,7 +27,7 @@
             <ul class="active">
                 <li><a href="{{ "/" | prepend: site.baseurl  }}"  {% if page.url == site.baseurl %} id="selected"{% endif %}>Home</a></li>
                 <li><a href="{{ "/about" | prepend: site.baseurl }}"  {% if page.url == "about" %} id="selected"{% endif %}>About</a></li>
-                <li><a href="{{ "/speaking" | prepend: site.baseurl }}"  {% if page.url == "speaking %} id="selected"{% endif %}>Speaking</a></li>
+                <li><a href="{{ "/speaking" | prepend: site.baseurl }}"  {% if page.url == "speaking" %} id="selected"{% endif %}>Speaking</a></li>
                 
                 <li><a href="{{ "/categoryview" | prepend: site.baseurl }}"  {% if page.url == "categoryview" or page.url == "monthview" or page.url == "tagcloudview" %} id="selected"{% endif %}>Archive</a></li>
                 {% if site.links.rss %}

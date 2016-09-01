@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 'ASP.NET Web Api - Setup Generic Response Handler'
-date: 2016-08-30 06:00
+date: 2016-09-02 06:00
 categories: ['Web Api']
-series: Web Api-getting-started
+series: web-api-getting-started
 published: true
 excerpt: |
     Welcome to the continuing series on getting started with ASP.NET Web Api.  In this article we will learn how to setup a standard response format for all of the endpoints.    
@@ -47,26 +47,27 @@ public class WrapResponseResult<T> : IHttpActionResult
 }
 ```    
 
-Now that we have the structure for the WrapResponseResult, we need to add some functionality to it.  The first thing we are going to do within the WrapResponseResult class is to add a Func<T> variable and set it in the constructor.
+Now that we have the structure for the WrapResponseResult, we need to add some functionality to it.  The first thing we are going to do within the WrapResponseResult class is to add a variable to hold the value for our function in Func<T> and a 2nd variable  to hold the HttpRequestMessage.  Then we will set the values in the constructor.
+
+
+The Func<T> is not something that you see everyday but it is very useful.  Basically it is a placeholder for a function and returns back whatever object we tell it to.  This is very useful when creating generic handlers like we are doing.  The value that we will set the Func<T> variable to when we call our wrapper is the function that will give us the results for the response.
 
 ```c#
 private readonly Func<T> _func;
+private readonly HttpRequestMessage _request;
 
-public WrapResponseResult(Func<T> func)
+public WrapResponseResult(Func<T> func, HttpRequestMessage request)
 {
     _func = func;
+    _request = request;
 }
 ```    
 
-Next we are going to create a method within the WrapResponseResult class to create our HttpResponseMessage.  This method will take in the func and execute it.  If the execution is successful it will return back a status message of 200.  If it is not successful, it will check if it is an HttpResponseException and if it is will just rethrow the error since it is already in the format needed.  If it is not an HttpResponseException it will return an HttpResponseMessage with a status code of 500 Internal Server Error.
+Next we are going to create a method within the WrapResponseResult class to create our HttpResponseMessage.  This method will take in two parameters: Func<T> and HttpRequestMessage.  Then it will execute the Func<T> to get the result to add to the response.  If the execution is successful it will return back a status message of 200.  If it is not successful, it will check if it is an HttpResponseException and if it is will just rethrow the error since it is already in the format needed.  If it is not an HttpResponseException it will return an HttpResponseMessage with a status code of 500 Internal Server Error.
 
 ```c#
-public HttpResponseMessage CreateResponse(Func<T> func)
+public HttpResponseMessage CreateResponse(Func<T> func, HttpRequestMessage request)
 {
-    HttpRequestMessage request = new HttpRequestMessage();
-    request.Properties.Add(HttpPropertyKeys.HttpConfigurationKey,
-        new HttpConfiguration());
-
     try
     {
         return request.CreateResponse(HttpStatusCode.OK, func());
@@ -82,12 +83,12 @@ public HttpResponseMessage CreateResponse(Func<T> func)
 }
 ```    
 
-The last thing to do is update the ExecuteAsync method toi call the CreateResponse method.  
+The last thing to do is update the ExecuteAsync method to call the CreateResponse method and pass in our _func and _request variables.  
 
 ```c#
 public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
 {
-    return Task.FromResult(CreateResponse(_func));
+    return Task.FromResult(CreateResponse(_func, _request));
 }
 ```
 
@@ -99,23 +100,21 @@ The completed WrapResponseResult should look like:
 public class WrapResponseResult<T> : IHttpActionResult
 {
     private readonly Func<T> _func;
+    private readonly HttpRequestMessage _request;
 
-    public WrapResponseResult(Func<T> func)
+    public WrapResponseResult(Func<T> func, HttpRequestMessage request)
     {
+        _request = request;
         _func = func;
     }
 
     public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
     {
-        return Task.FromResult(CreateResponse(_func));
+        return Task.FromResult(CreateResponse(_func, _request));
     }
 
-    public HttpResponseMessage CreateResponse(Func<T> func)
+    public HttpResponseMessage CreateResponse(Func<T> func, HttpRequestMessage request)
     {
-        HttpRequestMessage request = new HttpRequestMessage();
-        request.Properties.Add(HttpPropertyKeys.HttpConfigurationKey,
-            new HttpConfiguration());
-
         try
         {
             return request.CreateResponse(HttpStatusCode.OK, func());
@@ -151,11 +150,10 @@ Now that we have our WrapResponseResult class created, we need to update our Fir
         {
             string userName = RequestContext.Principal.Identity.Name;
             return new UserModel { UserName = userName };
-        });            
+        }, this.Request);            
 
-## Conclussion
+If you open a web browser and do a get against the api/First endpoint, you won't see any difference from what is returned back compared to just returning UserModel.  However, the benefit is that you now have a single generic method that will execute the function to get the results, format out the results, and check for errors.  This greatly simplifies the logic and amount of code that you will need to write for all of your Web Api methods.  As well since all of the methods will be using the same response handler, if you ever had to make a change to how the response is generated, all of the logic is contained within one class.  
 
-In this guide we learned how to create a generic wrapper using the IHttpActionResult to create a standard response for all of our Api methods.  This will make it easier to consume the data and you will always have a standard format for the responses.
 
 {% include series.html %}
 
