@@ -200,7 +200,7 @@ So far you have just bound the json output to the UI.  Useful for debugging but 
 
     > If you are unfamiliar with AngularJS, the ng-repeat on the ion-item is the command to loop through a collection
 
-1. Just like when you showed the raw json for the vm.projects you need to surround the properties with the double curly braces {{ }}
+1. Just like when you showed the raw json for the vm.projects you need to surround the properties with the double curly braces &#123;&#123; &#125;&#125; 
     * Put the name inside an &lt;h2&gt; and the created_on inside a &lt;p&gt;
     * For extra spacing, I also put a &lt;br /&gt; between the name and created_on
 1. Your view should now look like the screenshot at the start of this section.

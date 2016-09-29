@@ -8,8 +8,9 @@ permalink: '/workshops/index'
 
 Here you will find a list of available workshop tutorials that I have created.  
 
-{% for lab in (site.workshops | order: 'title') %}
-{% if lab.ishome == true and lab.url != "/workshops/index") %}
+{% assign sorted = (site.workshops | sort: 'title') %} 
+{% for lab in  sorted %}
+{% if lab.ishome == true and lab.url != "/workshops/index" %}
 <article>
 <header>
 <h2 class="post-title"><img src="{{ "/images/logo.png" | prepend: lab.type }}" alt="{{page.type}} Logo"><a href="{{ lab.url }}.html">{{ lab.title }}<br /></a></h2>

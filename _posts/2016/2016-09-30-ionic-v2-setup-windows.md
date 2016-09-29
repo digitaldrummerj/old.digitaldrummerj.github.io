@@ -3,7 +3,8 @@ layout: post
 title: "Ionic v2 - How to setup on Windows"
 published: true
 categories: [ionic]
-date: 2016-09-06 06:00
+date: 2016-09-30 06:00
+series: ionic2-setup
 excerpt: | 
     In order to work with the Ionic framework version 2 there is a bit of software installs and configuration that needs to happen in order to deploy to devices.  However, many of the guides out there leave out a number of steps that tripped me up when I first started using Ionic.  
 
@@ -14,15 +15,14 @@ excerpt: |
 
 {% assign imagedir = "/images/ionic2-windows/" | prepend: site.baseurl | prepend: site.url %}
 
+{% include series.html %}
+
 In order to work with the Ionic framework version 2 there is a bit of software installs and configuration that needs to happen in order to deploy to devices.  However, many of the guides out there leave out a number of steps that tripped me up when I first started using Ionic.  
 
 This guide will go through all of the steps needed for deploying to an Android device using a Windows machine.  Note that deploying to an iOS device requires a Mac.  
     
 Since I love to automate setup work so that I can easily repeat it, we will be using [Chocolatey](http://www.chocolatey.org) and [Boxstarter](http://www.boxstarter.org) for all of the installs and configurations. 
     
-* TOC
-{:toc}
-
 ## Software to be installed
 
 - [NodeJS](https://chocolatey.org/packages/nodejs.install)
@@ -34,10 +34,9 @@ Since I love to automate setup work so that I can easily repeat it, we will be u
 - [Google Chrome](https://chocolatey.org/packages/GoogleChrome)
 - Npm Modules: 
     * [cordova](https://www.npmjs.com/package/cordova)
-    * [gulp cli](https://www.npmjs.com/package/gulp-cli)
-    * [ionic@beta](https://www.npmjs.com/package/ionic)
+    * [ionic](https://www.npmjs.com/package/ionic)
 - [Visual Studio Android Emulator (Hyper-V Based)](https://www.visualstudio.com/en-us/features/msft-android-emulator-vs.aspx) 
-- [VS Code](https://code.visualstudio.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 ## How to install software
 
@@ -53,10 +52,10 @@ Since I love to automate setup work so that I can easily repeat it, we will be u
 1. On the desktop there should be a BoxStarter Shell icon, double-click on that to run it.  If the icon is not on the desktop, then open up a command prompt and type BoxStarterShell.
 1. I have setup a gist file that has all of the Chocolatey commands to run to install the rest of the software and configure it.  Run the gist file from the Boxstarter Shell:
     
-        Install-BoxStarterPackage -PackageName  https://gist.githubusercontent.com/digitaldrummerj/3fe2eb057004b6742b89/raw/3da48d349c313684077d7103547dfe79f7052617/ionic2  -DisableReboots
+        Install-BoxStarterPackage -PackageName  https://gist.githubusercontent.com/digitaldrummerj/3fe2eb057004b6742b89/raw/471ae019c02a0e1b623065c80afca7e542a841d4/ionic2  -DisableReboots
     
         
-- **NOTE:** If you want to install any of the optional software you will need to fork the gist file and remove the # in front of the line for the package you want to install.
+- **NOTE:** If you want to install any of the optional software you will need to fork the gist file, remove the # in front of the line for the package you want to install, click on the RAW button and replace the url above with your RAW url.
     
 ## Post Install Steps
 
