@@ -3,7 +3,8 @@ layout: post
 title: Ionic v2 - Setup on OSx
 published: true
 categories: [ionic]
-date: 2016-09-06 06:15
+date: 2016-09-30 06:15
+series: ionic2-setup
 excerpt: | 
     In order to work with the Ionic framework there is a bit of software installs and configuration that needs to happen in order to deploy to devices.  However, many of the guides out there leave out a number of steps that tripped me up when I first started using Ionic.  
 
@@ -11,6 +12,8 @@ excerpt: |
 ---
 
 {% assign imagedir = "/images/ionic2-osx/" | prepend: site.baseurl | prepend: site.url %}
+
+{% include series.html %}
 
 In order to work with the Ionic framework there is a bit of software installs and configuration that needs to happen in order to deploy to devices.  However, many of the guides out there leave out a number of steps that tripped me up when I first started using Ionic.  
 
@@ -61,21 +64,19 @@ For the first part of this tutorial, we will be installing everything to do Ioni
 
 ### Npm Packages
 
-Next we need to install 3 npm packages for cordova, gulp and ionic@beta.  At the time of this publication, ionic is on beta version 11.  
+Next we need to install 3 npm packages for cordova, gulp and ionic.  At the time of this publication, ionic is on release candidate 0.  
 
 1. Open a terminal and run the following commands to install the Global NPM packages that we need:
 
         sudo npm install -g cordova
-        sudo npm install -g gulp
-        sudo npm install -g ionic@beta
+        sudo npm install -g ionic
 
 1. Open a terminal and run the following to verify that node and npm was installed and is available from the command line
 
         cordova -v
-        gulp -v
         ionic -v
 
-> As of the writing of this post, you should have gotten cordova 6.3.1, ionic 2.0.0-beta.37 and gulp 3.9.1
+> As of the writing of this post, you should have gotten cordova 6.3.1 and ionic 2.1.0
   
 ### Google Chrome
 
@@ -96,7 +97,7 @@ Next we need to install 3 npm packages for cordova, gulp and ionic@beta.  At the
 
 1. Download from [https://code.visualstudio.com/](https://code.visualstudio.com)
 
-    ![VSCode Download]({{"vscode-download.png" | prepend: imagedir }})
+    ![VS Code Download]({{"vscode-download.png" | prepend: imagedir }})
 
 1. Double-click on the downloaded archive to expand the contents.
 1. Drag Visual Studio Code.app to the Applications folder, making it available in the Launchpad.

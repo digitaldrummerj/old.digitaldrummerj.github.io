@@ -146,7 +146,7 @@ Now we are ready to show the tasks data on our tasks view.  We will first just o
         <pre>{{ vm.tasks | json }}</pre>
         {% endraw %}
 
-    * In AngularJS, {{ }} brackets tells Angular to bind what is between the brackets to the UI.  In this case we are taking the vm.tasks and showing the raw json of the object.
+    * In AngularJS, &#123;&#123; &#125;&#125; brackets tells Angular to bind what is between the brackets to the UI.  In this case we are taking the vm.tasks and showing the raw json of the object.
     * The &lt;pre&gt;&lt;/pre&gt; tags make the json look a little more readable by keeping the break returns
 
 1. Run ionic serve and view the application in the web browser
@@ -170,7 +170,7 @@ So far you have just bound the json output to the UI.  Useful for debugging but 
     * task.completed
 
     > If you are unfamiliar with AngularJS, the ng-repeat on the ion-item is the command to loop through a collection
-1. Just like when you showed the raw json for the vm.projects you need to surround the properties with the double curly braces {{ }}
+1. Just like when you showed the raw json for the vm.projects you need to surround the properties with the double curly braces &#123;&#123; &#125;&#125;
     * Put the name inside an &lt;h2&gt; and completed inside a &lt;p&gt;
 1. Your view should now look like the screenshot at the start of this section.
 1. Once you get your view looking right, you can remove or comment out the &lt;pre&gt; tag for the raw json.

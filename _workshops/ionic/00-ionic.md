@@ -40,7 +40,8 @@ For these labs to work you need to setup your machine for [Ionic](http://ionicfr
 <div class="more-link">
 <p>
 
-{% for lab in (site.workshops | where: "type", page.type | order: 'title') %}
+{% assign filtered = (site.workshops | where: "type", page.type | order: 'title') %} 
+{% for lab in filtered %}
 {% if lab.type == page.type and lab.order == 1 %}
 <a href="{{lab.url}}">Start {{lab.title}} &raquo;</a>
 {% endif %}

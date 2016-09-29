@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'ASP.NET Web Api - Setup Generic Response Handler'
-date: 2016-09-02 06:00
+date: 2016-09-29 06:00
 categories: ['Web Api']
 series: web-api-getting-started
 published: true
