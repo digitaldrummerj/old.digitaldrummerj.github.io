@@ -29,22 +29,22 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 ## Upcoming Speaking Engagements
 
+### Nothing Scheduled.  
+
+If you'd like me to come to your event or user group, [email](mailto:digitaldrummerj@gmail.com) or [tweet](http://twitter.com/digitaldrummerj) at me.
+
+<!--
 ### Music City Code <span> - Nashville, TN (August 18th-20th, 2016)</span>
 
 - [Gulp for the .Net Developer](#gulp)
 - [Conference Home Page](http://www.musiccitycode.com)
-
-### Silicon Valley Code Camp <span> - San Jose, CA (September 30th - October 2nd, 2016)</span>
-
-- [Data Driven Restful Api Creation Made Easy Breezy](#cloudapishootout)
-- [Ionic v2 Full-Day Workshop](#ionic)
-- [Conference Home Page](https://www.siliconvalley-codecamp.com/)
+-->
 
 <p>&nbsp;</p>
 
 ----
 
-## Presentation Details
+## Presentation Topics
 
 Below are all of the talks that I have given with links to the slides and any additional resources that I may have.
 
@@ -145,7 +145,6 @@ Slides: [http://slides.com/digitaldrummerj/data-driven-restful-api-creation-made
 
 #### Past Presentations
 
-* [Silicon Valley Code Camp <span> - San Jose, CA (October 1st and 2nd, 2016)</span>](https://www.siliconvalley-codecamp.com/)
 * [Nebraska Code Conference <span>- Lincoln, NE (May 18th-20th, 2016)</span>](http://nebraskacode.com)
 * [Ionic Denmark Meetup <span>- Denmark Arhus (Giving Remotely) (April 27th, 2016)</span>](http://www.meetup.com/ionicdenmark/events/228676467/)
 * [Ionic Denmark Meetup<span>- Denmark Copenhagen (Giving Remotely) (May 11th, 2016)</span>](http://www.meetup.com/ionicdenmark/events/229123265/)
