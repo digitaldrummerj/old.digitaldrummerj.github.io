@@ -3,7 +3,7 @@ layout: post
 title: Ionic v2 - Setup on OSx
 published: true
 categories: [ionic]
-date: 2016-10-18 06:15
+date: 2016-11-01 06:15
 series: ionic2-setup
 excerpt: | 
     In order to work with the Ionic framework there is a bit of software installs and configuration that needs to happen in order to deploy to devices.  However, many of the guides out there leave out a number of steps that tripped me up when I first started using Ionic.  
@@ -525,3 +525,5 @@ The last thing we need to verify is that we can deploy the todo app to the iOS S
 ## Congratulations
 
 Congratulations, you made it through the guide and have everything setup to create your ionic applications for both Android and Ionic.    
+
+{% include series.html %}
