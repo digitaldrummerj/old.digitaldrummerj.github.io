@@ -25,7 +25,7 @@ Since I love to automate setup work so that I can easily repeat it, we will be u
     
 ## Software to be installed
 
-- [NodeJS](https://chocolatey.org/packages/nodejs.install)
+- [NodeJS](https://chocolatey.org/packages/nodejs)
 - [Git](https://chocolatey.org/packages/git)
 - [Gradle](http://chocolatey.org/packages/gradle)
 - [JDK8](https://chocolatey.org/packages/jdk8)
@@ -35,10 +35,12 @@ Since I love to automate setup work so that I can easily repeat it, we will be u
 - Npm Modules: 
     * [cordova](https://www.npmjs.com/package/cordova)
     * [ionic](https://www.npmjs.com/package/ionic)
-- [Visual Studio Android Emulator (Hyper-V Based)](https://www.visualstudio.com/en-us/features/msft-android-emulator-vs.aspx) 
 - [Visual Studio Code](https://code.visualstudio.com/)
+- [Visual Studio Android Emulator (Hyper-V Based)](https://www.visualstudio.com/en-us/features/msft-android-emulator-vs.aspx) or [Genymotion (Virtualbox Based)](https://www.genymotion.com/fun-zone/)
 
-## How to install software
+## Installing Software
+
+Much of the software installations are automated using Chocolatey.    Once you install Chocolatey and the Boxstarter Chocolatey package, the installation of everything else except the emulators is automated for you.  
 
 1. Install Chocolatey from [http://www.chocolatey.org](http://www.chocolatey.org).  Command is on the front-page of the site or below.  Open an administrative command prompt to run the command.  To open an administrative command prompt, go to the start menu, type cmd and then ctrl+shift+click on the cmd search result.
 
@@ -50,19 +52,22 @@ Since I love to automate setup work so that I can easily repeat it, we will be u
 
 1. Close the command prompt that you opened to install Chocolatey and BoxStarter
 1. On the desktop there should be a BoxStarter Shell icon, double-click on that to run it.  If the icon is not on the desktop, then open up a command prompt and type BoxStarterShell.
-1. I have setup a gist file that has all of the Chocolatey commands to run to install the rest of the software and configure it.  Run the gist file from the Boxstarter Shell:
+1. Run the following command in the Boxstarter Shell to create a Chocolatey package on the fly and run it
     
-        Install-BoxStarterPackage -PackageName  https://gist.githubusercontent.com/digitaldrummerj/3fe2eb057004b6742b89/raw/471ae019c02a0e1b623065c80afca7e542a841d4/ionic2  -DisableReboots
+        Install-BoxStarterPackage -PackageName  https://gist.githubusercontent.com/digitaldrummerj/3fe2eb057004b6742b89/raw/021eb3bb7e48745c68507904cecde1625ed0eac1/ionic2  -DisableReboots
     
         
-- **NOTE:** If you want to install any of the optional software you will need to fork the gist file, remove the # in front of the line for the package you want to install, click on the RAW button and replace the url above with your RAW url.
-    
-## Post Install Steps
+Unless you are always planning on testing and deploying to a locally connected Android device you will want to install an Android Emulator.    There are 2 options for an Android emulator: 
 
-### Configure Visual Studio Emulator for Android
+1. [Visual Studio Android Emulator (Hyper-V Based)](https://www.visualstudio.com/vs/msft-android-emulator/)
+1. [Genymotion (Virtualbox Based)](https://www.genymotion.com/fun-zone/)
 
-* Open up the Visual Studio Emulator for Android application 
-* Find the devices that you want to download.  Any device will do.  I normally pick one of the latest ones as a starting point (Marshmellow 6.0 at the time of this writing)        
+> If you are using virtualization software on your machine other than Hyper-V be aware that VMWare and Virtualbox does not work when Hyper-V is turned on.  It requires a reboot of Windows to turn Hyper-V off.
+{:.warning}
+
+Both of the emulator works well and if you can I would use the [Visual Studio Android Emulator](https://www.visualstudio.com/vs/msft-android-emulator/)
+
+Once you install one of the emulators, you will want to download at least 1 device to be able to test on.
 
 
 ## Verify that everything works
@@ -89,9 +94,7 @@ This sets up the todo app to be able to be build and deployed to an Android devi
 
 The last thing we need to verify is that we can deploy the todo app to the Visual Studio Android Emulator.  Before we can deploy the application, we need to start up the emulator.  
 
-1. Open up the Visual Studio Android Emulator
-1. Find the device that we downloaded
-1. Click the green arrow to start it up  
+1. Open up the Android Emulator that you installed and start up one of the devices that you downloaded 
 1. Once the emulator is started, you can deploy to it by running:
 
         ionic run android
