@@ -28,8 +28,15 @@ For the first part of this tutorial, we will be installing everything to do Ioni
 
 ### Node 
 
+>If you already have Node installed, you can skip this section.
+{:.warning}
+
+
 1. Download the LTS version of node from [https://www.nodejs.org](https://www.nodejs.org)
     * If you are using Chrome to download, it may tell you that a file with a pkg extension could be harmful to your computer and ask if you want to keep the file.  Make sure to click on the keep button.
+
+    ![NodeJs LTS download link]({{ "node-0.png" | prepend: imagedir }})
+
 1. After the download completes, double-click on the pkg file to run it
 1. Click Continue
 
@@ -38,7 +45,7 @@ For the first part of this tutorial, we will be installing everything to do Ioni
 1. Click Continue
 
     ![NodeJs Install Screen 2]({{ "node-2.png" | prepend: imagedir }})
-
+   
 1. Click Agree
 
     ![NodeJs Install Screen 3]({{ "node-3.png" | prepend: imagedir }})
@@ -60,7 +67,7 @@ For the first part of this tutorial, we will be installing everything to do Ioni
         node -v
         npm -v
 
-> As of the writing of this post, you should have gotten node v4.6.0 and npm 2.15.9
+> As of the writing of this post, you should have gotten node v6.9.1 and npm 3.10.8
 
 ### Npm Packages
 
@@ -70,13 +77,13 @@ Next we need to install 3 npm packages for cordova, gulp and ionic.  At the time
 
         sudo npm install -g cordova ionic
 
-1. In the terminal run the following to verify that Cordova install correctly. As of the writing of this post, you should get Cordova version 6.3.1
+1. In the terminal run the following to verify that Cordova install correctly. As of the writing of this post, you should get Cordova version 6.4.0
 
         cordova -v
 
     > When prompted with "May Cordova anonymously report usage statistics to improve the tool over time?", answer Yes or No depending on your preference.
 
-1. In the terminal run the following to verify that Ionic install correctly. As of the writing of this post, you should get Ionic version 2.1.0
+1. In the terminal run the following to verify that Ionic install correctly. As of the writing of this post, you should get Ionic version 2.1.4
         
         ionic -v
   
@@ -250,7 +257,7 @@ In this section, we will be installing everything that is needed in order to dep
 ### Android Studio
 	
 1. Download from [https://developer.android.com/studio/index.html#downloads](https://developer.android.com/studio/index.html#downloads)
-    * Version 2.2.1.0 as of this writing.
+    * Version 2.2.2.0 as of this writing.
  
     ![Android Studio Download]({{"android-studio-download.png" | prepend: imagedir }})
 
@@ -293,7 +300,7 @@ In this section, we will be installing everything that is needed in order to dep
 
 In order to run the Genymotion emulator, we need to install Virtualbox.
 
-1. Navigate to [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads) and click on the install link for OSx and the extension package
+1. Navigate to [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads) and click on the install link for OSx and the extension package.  Version 5.1.4 as of this writing. 
 
     ![Virtualbox Download Page]({{ "virtualbox-download.png" | prepend: imagedir }})
 
@@ -515,4 +522,6 @@ The last thing we need to verify is that we can deploy the todo app to the iOS S
 
     ionic run ios
 
-You are now ready to go create your ionic applications.
+## Congratulations
+
+Congratulations, you made it through the guide and have everything setup to create your ionic applications for both Android and Ionic.    
