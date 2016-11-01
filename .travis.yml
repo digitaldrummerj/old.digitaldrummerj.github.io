@@ -2,7 +2,7 @@ language: ruby
 cache: bundler
 sudo: true
 rvm:
-  - 2.0.0
+  - 2.2
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install ncftp
