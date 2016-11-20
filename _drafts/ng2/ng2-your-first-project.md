@@ -40,7 +40,7 @@ After the Angular CLI is installed you can create a new project with the ng new 
 1. Navigate to where you want to store your project
 1. Generate the new project by rrunning
 
-	ng new ProProjectName --styles=scss --routing 
+		ng new ProProjectName --styles=scss --routing 
  
  The ng new command does several things for you:
  
